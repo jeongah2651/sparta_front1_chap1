@@ -4,7 +4,6 @@ export function jsx(type, props, ...children) {
 
 export function createElement(node) {
   // jsx를 dom으로 변환
-
   // 노드가 문자열인 경우, 텍스트 노드를 생성
   if (typeof node === 'string') {
     return document.createTextNode(node);
@@ -13,7 +12,7 @@ export function createElement(node) {
   // 노드가 문자열이 아닌 경우
   // 1.  node가 객체인 경우, type 속성을 기반으로 해당하는 실제 DOM 요소를 생성
   const element = document.createElement(node.type);
-
+  
   //2. 노드의 속성(props)을 반복 있는 경우 attribute로 넣어줍니다.
   Object
     //Object.entries() : 키-값 배열을 반환
@@ -25,6 +24,7 @@ export function createElement(node) {
       element.setAttribute(key, value);
   });
 
+ 
   // 3. 노드에 children이 있는 경우 자식 엘리먼트를 추가 생성하여 노드 하위로 넣어줍니다.
   node.children?.forEach((child) => {
     element.appendChild(createElement(child));
@@ -75,7 +75,12 @@ function updateAttributes(target, newProps, oldProps) {
 }
 
 export function render(parent, newNode, oldNode, index = 0) {
-  // 1. 만약 newNode가 없고 oldNode만 있다면
+  // console.log("parent:"+parent, "newNode:"+newNode, "oldNode:"+oldNode, "index:"+index)
+  // console.dir(parent)
+  // console.dir(newNode)
+  // console.dir(oldNode)
+
+  // 1. 만약 newNode가 없고 oldNode만 있다면  >> 이부분은 test가 없다.
   if (!newNode && oldNode) { 
     //   parent에서 oldNode를 제거
     parent.removeChild(parent.childNodes[index]);
@@ -83,15 +88,16 @@ export function render(parent, newNode, oldNode, index = 0) {
     return;
   }
 
-  // 2. 만약 newNode가 있고 oldNode가 없다면
+  // 2. 만약 newNode가 있고 oldNode가 없다면  >> 이부분은 test가 없다.
   if (newNode && !oldNode) { 
+    
     //   newNode를 생성하여 parent에 추가
     parent.appendChild(createElement(newNode));
     //   종료
     return;
   }
 
-  // 3. 만약 newNode와 oldNode 둘 다 문자열이고 서로 다르다면
+  // 3. 만약 newNode와 oldNode 둘 다 문자열이고 서로 다르다면  >> 이부분은 test가 없다.
   if (typeof newNode === 'string' && typeof oldNode === 'string' && newNode !== oldNode) {
     //   oldNode를 newNode로 교체
     parent.replaceChild(createElement(newNode), parent.childNodes[index]);
@@ -109,15 +115,15 @@ export function render(parent, newNode, oldNode, index = 0) {
 
   // 5. newNode와 oldNode에 대해 updateAttributes 실행
   // 성능향상 : 새로운 노드가 텍스트 노드인 경우에는 속성이 없으므로 updateAttributes 함수를 호출할 필요가 없습니다. 
-  if (typeof newNode !== 'string') {
+  // if (typeof newNode !== 'string') {
     updateAttributes(parent.childNodes[index], newNode.props, oldNode.props);
-  }
+  // }
 
   // 6. newNode와 oldNode 자식노드들 중 더 긴 길이를 가진 것을 기준으로 반복
   if (newNode.children && oldNode.children) {
     const maxLength = Math.max(newNode.children.length, oldNode.children.length);
     for (let i = 0; i < maxLength; i++) {
-      //   각 자식노드에 대해 재귀적으로 render 함수 호출
+      //  각 자식노드에 대해 재귀적으로 render 함수 호출
       render(parent.childNodes[index], newNode.children[i], oldNode.children[i], i);
     }
   }
