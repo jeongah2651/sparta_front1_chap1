@@ -18,24 +18,6 @@
 <img width="300" alt="image" src="https://github.com/jeongah2651/sparta_front1_chap1/assets/46205870/fb481c69-3232-4fbf-8e51-2d691b817bc0">
 
 
-<style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  th {
-    background-color: #f2f2f2;
-  }
-  img {
-    max-width: 100%;
-  }
-</style>
-
 <table>
   <tr>
     <th>No.</th>
