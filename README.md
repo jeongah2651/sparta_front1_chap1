@@ -24,9 +24,9 @@
   <tr>
     <td>3.심화과제</td>
     <td>
-      <a href="https://github.com/jeongah2651/sparta_front1_chap1/blob/main/chapter1/src/a_worker.mjs" target="_blank">a_worker.mjs</a>
-      <a href="https://github.com/jeongah2651/sparta_front1_chap1/blob/main/chapter1/src/a_juniorEngineer.mjs" target="_blank">a_juniorEngineer.mjs</a>
-      <a href="https://github.com/jeongah2651/sparta_front1_chap1/blob/main/chapter1/src/a_main.mjs" target="_blank">a_main.mjs</a>
+      <a href="https://github.com/jeongah2651/sparta_front1_chap1/blob/main/chapter1/src/a_worker.mjs" target="_blank">a_worker.mjs</a> <br>
+      <a href="https://github.com/jeongah2651/sparta_front1_chap1/blob/main/chapter1/src/a_juniorEngineer.mjs" target="_blank">a_juniorEngineer.mjs</a> <br>
+      <a href="https://github.com/jeongah2651/sparta_front1_chap1/blob/main/chapter1/src/a_main.mjs" target="_blank">a_main.mjs</a> 
     </td>
     <td><img src="https://github.com/jeongah2651/sparta_front1_chap1/assets/46205870/fb481c69-3232-4fbf-8e51-2d691b817bc0" alt="Screenshot 2" width="300"></td>
   </tr>
