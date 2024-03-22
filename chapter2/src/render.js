@@ -1,5 +1,6 @@
 export function jsx(type, props, ...children) {
-  return { type, props, children };
+  // return { type, props, children };
+  return { type, props, children: children.flat() };
 }
 
 export function createElement(node) {
@@ -61,7 +62,9 @@ function updateAttributes(target, newProps, oldProps) {
       target.removeAttribute(key);
     }
   });
-  
+
+
+  //chatGpt는 왜 이렇게 알려주지?
   // const props = { ...oldProps, ...newProps };
 
   // for (const [key, value] of Object.entries(props)) {
