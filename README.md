@@ -1,7 +1,24 @@
 [ 2주차 ]
 
-1. <a href="https://github.com/jeongah2651/sparta_front1_chap1/blob/main/chapter2/src/render.js" target="_blank">render.js</a>  
-2. <a href="https://github.com/jeongah2651/sparta_front1_chap1/blob/main/chapter2/src/hooks.js" target="_blank">hooks.js</a>
+<table>
+  <tr>
+    <th>No.</th>
+    <th>link</th>
+    <th>Screenshot</th>
+  </tr>
+  <tr>
+    <td>1.</td>
+    <td>v</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2.</td>
+    <td><a href="https://github.com/jeongah2651/sparta_front1_chap1/blob/main/chapter2/src/hooks.js" target="_blank">hooks.js</a></td>
+    <td></td>
+  </tr>
+
+
+</table>
 
 [ 1주차 ]
 
