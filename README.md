@@ -8,7 +8,7 @@
   </tr>
   <tr>
     <td>1.</td>
-    <td>v</td>
+    <td><a href="https://github.com/jeongah2651/sparta_front1_chap1/blob/main/chapter2/src/hooks.js">hooks.js</a></td>
     <td></td>
   </tr>
   <tr>
