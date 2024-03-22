@@ -1,7 +1,6 @@
 [ 2주차 ]
 
 <table>
-  
   <tr>
     <th>No.</th>
     <th>link</th>
@@ -10,19 +9,12 @@
   <tr>
     <td>1</td>
     <td><a href="https://github.com/jeongah2651/sparta_front1_chap1/blob/main/chapter2/src/hooks.js">hooks.js</a></td>
-    <td rowspan="2"><img alt="스크린샷 2024-03-22 오후 11 49 45" src="https://github.com/jeongah2651/sparta_front1_chap1/assets/46205870/d20105dc-d5a1-40c5-9fb5-b1919ec7a6cb" width="300"></td>
+    <td rowspan="2"><img alt="스크린샷 2024-03-22 오후 11 49 45" src="https://github.com/jeongah2651/sparta_front1_chap1/assets/46205870/d20105dc-d5a1-40c5-9fb5-b1919ec7a6cb" width="300"/></td>
   </tr>
   <tr>
     <td>2</td>
     <td><a href="https://github.com/jeongah2651/sparta_front1_chap1/blob/main/chapter2/src/hooks.js" target="_blank">hooks.js</a></td>
-    <td></td>
   </tr>
-  <tr>
-    <td>3</td>
-    <td></td>
-    <td></td>
-  </tr>
-
 </table>
 
 [ 1주차 ]
