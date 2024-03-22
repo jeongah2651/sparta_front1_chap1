@@ -40,27 +40,28 @@ function updateAttributes(target, newProps, oldProps) {
   newProps = newProps ?? {};
 
   // newProps들을 반복하여 각 속성과 값을 확인
+  //  만약 oldProps에 같은 속성이 있고 값이 동일하다면
+  //  다음 속성으로 넘어감 (변경 불필요)
+  //  만약 위 조건에 해당하지 않는다면 (속성값이 다르거나 구속성에 없음)
+  //  target에 해당 속성을 새 값으로 설정
   Object.entries(newProps ?? {}).forEach(([key, value]) => {
-    //   만약 oldProps에 같은 속성이 있고 값이 동일하다면
-    //     다음 속성으로 넘어감 (변경 불필요)
-    //   만약 위 조건에 해당하지 않는다면 (속성값이 다르거나 구속성에 없음)
     if (oldProps?.[key] !== value) {
-      //     target에 해당 속성을 새 값으로 설정
       target.setAttribute(key, value);
     }
   });
 
 
   // oldProps을 반복하여 각 속성 확인
+  // 만약 newProps들에 해당 속성이 존재한다면
+  // 다음 속성으로 넘어감 (속성 유지 필요)
+  // 만약 newProps들에 해당 속성이 존재하지 않는다면
+  // target에서 해당 속성을 제거
   Object.keys(oldProps ?? {}).forEach((key) => {
-    //   만약 newProps들에 해당 속성이 존재한다면
-    //     다음 속성으로 넘어감 (속성 유지 필요)
-    //   만약 newProps들에 해당 속성이 존재하지 않는다면
     if (!(key in newProps)) {
-      //     target에서 해당 속성을 제거
       target.removeAttribute(key);
     }
   });
+  
   // const props = { ...oldProps, ...newProps };
 
   // for (const [key, value] of Object.entries(props)) {
