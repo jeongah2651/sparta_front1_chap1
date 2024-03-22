@@ -15,6 +15,12 @@
     <td>2</td>
     <td><a href="https://github.com/jeongah2651/sparta_front1_chap1/blob/main/chapter2/src/hooks.js" target="_blank">hooks.js</a></td>
   </tr>
+  <tr>
+    <td>3</td>
+    <td><a href="https://github.com/jeongah2651/sparta_front1_chap1/blob/main/chapter2/src/MyReact.js">MyReact.js</a></td>
+    <td><img width="300" alt="image" src="https://github.com/jeongah2651/sparta_front1_chap1/assets/46205870/19a20c3f-aeac-4be3-8da7-d8c6ad1bc459"></td>
+  </tr>
+
 </table>
 
 [ 1주차 ]
